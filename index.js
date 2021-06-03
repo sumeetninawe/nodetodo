@@ -52,7 +52,7 @@ app.route("/remove/:id").get((req, res) => {
 });
 
 
-mongoose.connect(process.env.DB_CONNECT, { useNewUrlParser: true }, () => {
+mongoose.connect(process.env.DB_CONNECT, { useNewUrlParser: true, useUnifiedTopology: true }, () => {
     console.log("Connected to db!");
     app.listen(3000, () => console.log("Server Up and running"));
 });
